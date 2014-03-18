@@ -1,0 +1,393 @@
+@import url(../fonts/symbolset/ss-steedicons.css);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+/*---------------------------------------------------
+    LESS Elements 0.9.1
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+    MODIFIED BY: Brandon Brown
+  ---------------------------------------------------*/
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE7 */
+ul,
+li,
+img,
+form,
+table,
+tr,
+td,
+ol,
+p,
+h1,
+h2,
+h3,
+h4 {
+  position: relative;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.ss-icon {
+  position: relative;
+  top: 2px;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+* {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  position: relative;
+  display: block;
+  clear: both;
+  width: 960px;
+  margin: 0 auto;
+}
+.grid {
+  margin: 0 0 40px 0;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.grid.pad {
+  padding: 40px;
+}
+[class*='col-'] {
+  float: left;
+  padding-right: 40px;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.grid [class*='col-']:last-of-type {
+  padding-right: 0;
+}
+[class*='col-'].centered {
+  float: none;
+  margin: 0 auto;
+}
+.grid-pad {
+  padding: 40px 0 40px 40px;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.grid-pad [class*='col-']:last-of-type {
+  padding-right: 40px;
+}
+.col-1-3 {
+  width: 33.33%;
+}
+.col-2-3 {
+  width: 66.66%;
+}
+.col-1-2 {
+  width: 50%;
+}
+.col-1-4 {
+  width: 25%;
+}
+.col-3-4 {
+  width: 75%;
+}
+.col-1-8 {
+  width: 12.5%;
+}
+* {
+  color: #5b5b5b;
+  line-height: 1.5;
+  font-family: 'Lato', helvetica, arial, sans-serif;
+}
+body {
+  font-size: 100%;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: #5b5b5b;
+  font-weight: bold;
+  padding: 0 0 20px 0;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 4.2rem;
+}
+h2 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+h3 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+h4 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+h5 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+a {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #70a127;
+}
+a:hover {
+  color: #015291;
+}
+a * {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: #70a127;
+}
+a *:hover {
+  color: #015291;
+}
+.polaroids {
+  background-color: #ececec;
+  padding: 80px 0 80px 0;
+}
+.polaroids .container:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.polaroids li {
+  background-color: #ffffff;
+  padding: 10px;
+  float: left;
+  width: 300px;
+}
+.polaroids li:nth-of-type(2) {
+  margin: 0 30px 0 30px;
+}
+.polaroids li:last-of-type {
+  float: right;
+}
+.polaroids li .polaroid-photo {
+  display: block;
+  width: 280px;
+  height: 280px;
+  background: url('') #70a127 no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  text-decoration: none;
+}
+.polaroids li .polaroid-label {
+  display: block;
+  padding: 20px 0 20px 0;
+  margin: 0;
+}
+.polaroids li .polaroid-label:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.polaroids li .polaroid-label h4 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 50%;
+}
+.polaroids li .polaroid-label a {
+  display: inline-block;
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+.intro {
+  padding: 80px 0 80px 0;
+  text-align: center;
+}
+.intro h1 {
+  padding: 0;
+  margin: 0;
+}
+header {
+  height: 620px;
+  overflow: hidden;
+}
+header.short {
+  height: 280px;
+}
+.logo {
+  display: block;
+  position: absolute !important;
+  top: -5px;
+  left: 0;
+  width: 229px;
+  background: url(../images/logo.png) no-repeat top left;
+  background-size: 100%;
+  height: 180px;
+  text-decoration: none;
+}
+.logo:hover {
+  top: 0px;
+}
+.panorama {
+  display: block;
+  background: url(../images/panorama.jpg) repeat-x 2509px 0;
+  width: 2509px;
+  height: 100%;
+  -webkit-animation: scroll 200s infinite linear;
+  -moz-animation: scroll 200s infinite linear;
+  -o-animation: scroll 200s infinite linear;
+  animation: scroll 200s infinite linear;
+}
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px 0 20px 0;
+  text-align: right;
+}
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+}
+nav li a {
+  color: #015291;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 1px 1px 0px #ffffff;
+}
+nav li a * {
+  color: #015291;
+}
+nav li a .ss-icon {
+  display: block;
+  text-align: center;
+  font-size: 2.2rem;
+}
+nav li a .label {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+}
+nav li a:hover {
+  color: #70a127;
+}
+nav li a:hover * {
+  color: #70a127;
+}
+@-webkit-keyframes scroll {
+  from {
+    background-position: 2509px 0;
+  }
+  to {
+    background-position: -548px 0;
+  }
+}
+@-moz-keyframes scroll {
+  from {
+    background-position: 2509px 0;
+  }
+  to {
+    background-position: -548px 0;
+  }
+}
+@-o-keyframes scroll {
+  from {
+    background-position: 2509px 0;
+  }
+  to {
+    background-position: -548px 0;
+  }
+}
+@keyframes scroll {
+  from {
+    background-position: 2509px 0;
+  }
+  to {
+    background-position: -548px 0;
+  }
+}
+footer {
+  background-color: #253a75;
+  padding: 40px 0 40px 0;
+}
+footer p,
+footer h5,
+footer li,
+footer span {
+  color: #dfdede;
+}
+footer h5 {
+  text-transform: uppercase;
+}
+footer a {
+  color: #dfdede;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #70a127;
+}
+footer a * {
+  color: #dfdede;
+}
+footer a *:hover {
+  color: #70a127;
+}
+footer:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.column-about,
+.column-contact,
+.column-social {
+  float: left;
+  width: 33%;
+}
+.column-social li {
+  display: inline-block;
+  margin-right: 10px;
+}

@@ -1,0 +1,38 @@
+footer {
+    background-color: #253a75;
+    padding: @gutter 0 @gutter 0;
+    p, h5, li, span {
+        color: #dfdede;
+    }
+    h5 {
+        text-transform: uppercase;
+    }
+    a {
+        color: #dfdede;
+        text-decoration: none;
+        &:hover {
+            color: @green;
+        }
+        * {
+            color: #dfdede;
+            &:hover {
+                color: @green;
+            }
+        }
+    }
+    .clearfix();
+}
+
+.column-about,
+.column-contact,
+.column-social {
+    float: left;
+    width: 33%;
+}
+
+.column-social {
+    li {
+        display: inline-block;
+        margin-right: @gutter/4;
+    }
+}

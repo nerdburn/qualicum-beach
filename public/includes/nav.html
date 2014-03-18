@@ -1,0 +1,18 @@
+<div class="nav" ng-controller="navCtrl">
+    <div class="logo-container">
+        <a href="#/"><img src="images/logo.png" class="logo"></a>
+    </div>
+    <form class="search">
+        <input type="text" value="" placeholder="Search me..." />
+        <span class="ss-icon">Search</span>
+    </form>
+    <ul>
+        <li><h4>Reports</h4></li>
+        <li><a app-active="/" href="#/">Weekly Report</a></li>
+        <li><a app-active="/reports/totals" href="#/reports/totals">Totals Report</a></li>
+        <li><a app-active="/reports/traffic" href="#/reports/traffic">Traffic Report</a></li>
+        <li><h4>Admin</h4></li>
+        <li><a app-active="/manage/users" href="#/manage/users">Manage Users</a></li>
+        <li><a app-active="/logout" href="#/logout">Log Out</a></li>
+    </ul>
+</div>

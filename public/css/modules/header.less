@@ -1,0 +1,75 @@
+header {
+    height: 620px;
+    overflow: hidden;
+    
+    &.short {
+        height: 280px;
+    }
+}
+
+.logo {
+    display: block;
+    position: absolute !important;
+    top: -5px;
+    left: 0;
+    width: 229px;
+    background: url(../images/logo.png) no-repeat top left;
+    background-size: 100%;
+    height: 180px;
+    text-decoration: none;
+    &:hover {
+        top: 0px;
+    }
+}
+
+.panorama {
+    display: block;
+    background: url(../images/panorama.jpg) repeat-x 2509px 0;
+    width: 2509px;
+    height: 100%;
+    .animation(scroll, 200s, infinite, linear);
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: @gutter/2 0 @gutter/2 0;
+    text-align: right;
+    li {
+        display: inline-block;
+        margin-left: 50px;
+        a {
+            color: @blue;
+            * {
+                color: @blue;
+            }
+            display: block;       
+            text-transform: uppercase;         
+            text-decoration: none;
+            text-align: center;
+            text-shadow: 1px 1px 0px @white;
+            .ss-icon {
+                display: block;
+                text-align: center;                    
+                font-size: 2.2rem;
+            }            
+            .label {
+                text-align: center;
+                display: block;
+                font-weight: bold;
+            }
+            &:hover {
+                color: @green;
+                * {
+                    color: @green;
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes scroll { from{ background-position: 2509px 0 } to { background-position:-548px 0 }}
+@-moz-keyframes scroll { from{ background-position: 2509px 0 } to { background-position:-548px 0 }}
+@-o-keyframes scroll { from{ background-position: 2509px 0 } to { background-position:-548px 0 }}
+@keyframes scroll { from{ background-position: 2509px 0 } to { background-position:-548px 0 }}

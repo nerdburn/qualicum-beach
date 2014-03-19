@@ -618,6 +618,57 @@ a *:hover {
   font-size: 0.85rem;
   font-family: 'FrutigerLTW01-55Roman';
 }
+.search {
+  background-color: #f6f6f6;
+}
+.search .container {
+  padding: 20px 0 20px 0;
+}
+.search .container:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.search .left,
+.search .right {
+  width: 50%;
+  float: left;
+}
+.search form {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: block;
+}
+.search label {
+  display: block;
+  width: 100%;
+  text-align: right;
+  text-transform: uppercase;
+  padding-right: 20px;
+  padding-top: 11px;
+  font-size: 0.85rem;
+  font-family: 'FrutigerLTW01-67BoldCn';
+}
+.search input {
+  display: block;
+  border: 0;
+  width: 100%;
+  color: #5b5b5b;
+  background-color: #ffffff;
+  padding: 8px 10px 8px 10px;
+  font-size: 1rem;
+  font-family: 'FrutigerLTW01-45Light';
+}
+.search .ss-icon {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  color: #5b5b5b;
+}
 header {
   position: relative;
   height: 620px;
@@ -981,6 +1032,9 @@ footer .container:after {
   .map .left {
     padding-left: 40px;
   }
+  .search .container {
+    padding-right: 20px;
+  }
 }
 @media only screen and (max-width: 750px) {
   .faq li,
@@ -1046,5 +1100,16 @@ footer .container:after {
     clear: both;
     top: 0;
     left: 0;
+  }
+  .search .container {
+    padding-left: 20px;
+  }
+  .search .left {
+    display: none;
+  }
+  .search .right {
+    clear: both;
+    width: 100%;
+    float: none;
   }
 }

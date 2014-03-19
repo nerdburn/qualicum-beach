@@ -38,6 +38,11 @@
             padding-left: @gutter;
         }
     }
+    .search {
+        .container {
+            padding-right: @gutter/2;
+        }
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -114,5 +119,16 @@
             top: 0;
             left: 0;
         }        
+    }
+    .search {
+        .container {
+            padding-left: @gutter/2;
+        }
+        .left { display: none; }
+        .right {
+            clear: both;
+            width: 100%;
+            float: none;
+        }
     }
 }

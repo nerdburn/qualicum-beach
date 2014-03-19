@@ -1,0 +1,63 @@
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    .container {
+        width: 100%;
+    }
+    header {
+        .container {
+            width: 100%;
+            top: 0;
+            left: 0;
+            margin-left: 0;
+        }
+        nav {
+            display: none;
+        }
+        .menu-icon {
+            display: block;
+        }        
+    }
+    .logo {
+        left: 20px;
+    }
+    .callouts {
+        padding: 0 @gutter/2 0 @gutter/2;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .callouts {
+        .left,
+        .right {
+            width: 100%;
+            clear: both;
+            float: none;
+            bottom: 0;
+            &:hover {
+                bottom: 0;
+            }
+        }
+    }
+    .polaroids {
+        li {
+            width: 70%;
+            margin: 0 auto;
+            clear: both;
+            float: none;
+        }
+    }
+    .column-about,
+    .column-contact,
+    .column-social {
+        width: 100%;
+        clear: both;
+        float: none;
+        padding: @gutter/2;
+        p.copyright {
+            position: relative;
+            clear: both;
+            top: 0;
+            left: 0;
+        }        
+    }
+}

@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Complete In Him';
+    src: url('complete_in_him-webfont.eot');
+    src: url('complete_in_him-webfont.eot?#iefix') format('embedded-opentype'),
+         url('complete_in_him-webfont.woff') format('woff'),
+         url('complete_in_him-webfont.ttf') format('truetype'),
+         url('complete_in_him-webfont.svg#complete_in_himregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

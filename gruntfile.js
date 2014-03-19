@@ -25,19 +25,8 @@ module.exports = function(grunt) {
                 },
                 files: {
                     '<%= jsDir %>qb.min.js': [
-                        '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
-                        '<%= jsDir %>plugins/angular.js',
-                        '<%= jsDir %>plugins/angular-cookies.min.js',
-                        '<%= jsDir %>plugins/angular-resource.min.js',
-                        '<%= jsDir %>plugins/angular-route.js',                        
-                        '<%= baseDir %>fonts/symbolset/ss-steedicons.js',                        
-                        '<%= jsDir %>app.js',
-                        '<%= jsDir %>config.js',                        
-                        '<%= jsDir %>directives.js',
-                        '<%= jsDir %>filters.js',                        
-                        '<%= jsDir %>services/*.js',                     
-                        '<%= jsDir %>controllers/*.js',                                                                             
-                        '<%= jsDir %>init.js'
+                        '<%= baseDir %>fonts/symbolset/ss-steedicons.js',
+                        '<%= jsDir %>qb.js'
                     ]
                 }
             }

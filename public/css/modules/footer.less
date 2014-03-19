@@ -1,11 +1,13 @@
 footer {
-    background-color: #253a75;
-    padding: @gutter 0 @gutter 0;
+    background-color: #015291;
+    padding: 0;
     p, h5, li, span {
         color: #dfdede;
     }
     h5 {
+        font-family:'FrutigerLTW01-67BoldCn';
         text-transform: uppercase;
+        font-size: 0.75rem;        
     }
     a {
         color: #dfdede;
@@ -20,7 +22,9 @@ footer {
             }
         }
     }
-    .clearfix();
+    .container {
+        .clearfix();    
+    }
 }
 
 .column-about,
@@ -28,11 +32,55 @@ footer {
 .column-social {
     float: left;
     width: 33%;
+    padding: @gutter/2 0 @gutter 0;
+}
+
+.column-about {
+    padding-left: @gutter;
+    padding-right: @gutter;
+    background-color: #0c5996;
+    h5 {
+        position: relative;
+        display: block;
+        background-color: @blue;
+        padding: 7px 0 4px 7px;    
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+        	width: 0; 
+        	height: 0; 
+        	border-top: 15px solid transparent;
+        	border-bottom: 15px solid transparent; 
+        	border-right: 15px solid #0c5996;
+        }
+    }
+}
+
+.column-contact {
+    font-size: 0.85rem;
+    padding-left: @gutter;
+    padding-right: @gutter;
+    .ss-icon {
+        padding-right: 5px;
+    }
+    .label {
+        &:first-of-type {
+            text-decoration: underline;
+        }
+    }
 }
 
 .column-social {
     li {
         display: inline-block;
         margin-right: @gutter/4;
+        font-size: 1.5rem;
+    }
+    .copyright {
+        position: anbsolute;
+        bottom: -25px;
+        font-size: 0.75rem;
     }
 }

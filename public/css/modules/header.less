@@ -1,15 +1,42 @@
 header {
+    position: relative;
     height: 620px;
     overflow: hidden;
+    background-color: @hr;
     
+    .container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        width: 960px;
+        left: 50%;
+        margin-left: -480px;
+        background-color: transparent;
+    }
     &.short {
         height: 280px;
+    }   
+}
+
+.menu-icon {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    font-size: 2rem;
+    text-shadow: 1px 1px 0px @white;
+    * {
+        color: @blue;
+        &:hover {
+            color: @green;
+        }
     }
 }
 
 .logo {
     display: block;
-    position: absolute !important;
+    position: absolute;
     top: -5px;
     left: 0;
     width: 229px;
@@ -22,12 +49,13 @@ header {
     }
 }
 
+@pan-width: 2223px;
 .panorama {
     display: block;
-    background: url(../images/panorama.jpg) repeat-x 2509px 0;
-    width: 2509px;
+    background: url(../images/panorama.jpg) no-repeat @pan-width 0;
+    width: @pan-width;
     height: 100%;
-    .animation(scroll, 200s, infinite, linear);
+    .animation(scroll, 70s, infinite, linear);
 }
 
 nav {
@@ -45,6 +73,7 @@ nav {
                 color: @blue;
             }
             display: block;       
+            font-family:'FrutigerLTW01-67BoldCn';
             text-transform: uppercase;         
             text-decoration: none;
             text-align: center;
@@ -58,6 +87,7 @@ nav {
                 text-align: center;
                 display: block;
                 font-weight: bold;
+                font-size: 0.85rem;
             }
             &:hover {
                 color: @green;
@@ -67,9 +97,96 @@ nav {
             }
         }
     }
+    &.mobile {
+        display: none;
+        position: relative;
+        width: 100%;
+        background-color: @blue;
+        padding-right: @gutter/2;
+        text-align: center;
+        li {
+            text-align: center;
+            a {
+                color: @white;
+                text-shadow: 1px 1px 0px rgba(1, 1, 1, 0.5);
+                * {
+                    color: @white;
+                }
+                &:hover {
+                    color: @green;
+                    * {
+                        color: @green;
+                    }
+                }
+            }
+        }
+    }
 }
 
-@-webkit-keyframes scroll { from{ background-position: 2509px 0 } to { background-position:-548px 0 }}
-@-moz-keyframes scroll { from{ background-position: 2509px 0 } to { background-position:-548px 0 }}
-@-o-keyframes scroll { from{ background-position: 2509px 0 } to { background-position:-548px 0 }}
-@keyframes scroll { from{ background-position: 2509px 0 } to { background-position:-548px 0 }}
+.callouts {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .clearfix();
+    .transition(all 0.2s linear ease-in-out);    
+    .left,
+    .right {
+        position: relative;
+        text-decoration: none;
+        padding: @gutter/2 0 0 @gutter/2;
+        display: block;
+        height: 95px;
+        overflow: hidden;
+        color: @white;
+        bottom: -5px;
+        * {
+            color: @white;
+        }
+        p {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            padding: 0;
+            margin: 0;
+            font-family: 'Complete In Him';
+            span {
+                font-family: 'FrutigerLTW01-55Roman';
+                display: block;
+                font-size: 0.85rem;
+            }
+        }
+        .ss-icon {
+            display: block;
+            float: left;
+            font-size: 2.5rem;
+            padding-right: @gutter/2;
+            position: relative;            
+        }
+        &:hover {
+            bottom: 0px;
+        }
+    }
+    .left {
+        width: 300px;
+        background-color: rgba(112, 161, 39, 0.7);
+    }
+    .right {
+        width: 200px;
+        background-color: rgba(1, 58, 101, 0.6);
+        .ss-icon {
+            padding-top: 7px;
+            font-size: 3rem;
+            line-height: 3rem;
+            padding-right: @gutter/4;
+        }
+        p {
+            padding-top: 17px;
+        }
+    }
+}
+
+@-webkit-keyframes scroll { 0% { background-position: 0 0 } 50% { background-position: -@pan-width/4 0 } 100% { background-position: 0 0 }}
+@-moz-keyframes scroll { 0% { background-position: 0 0 } 50% { background-position: -@pan-width/4 0 } 100% { background-position: 0 0 }}
+@-o-keyframes scroll { 0% { background-position: 0 0 } 50% { background-position: -@pan-width/4 0 } 100% { background-position: 0 0 }}
+@keyframes scroll { 0% { background-position: 0 0 } 50% { background-position: -@pan-width/4 0 } 100% { background-position: 0 0 }}

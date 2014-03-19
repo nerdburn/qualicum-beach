@@ -1,5 +1,6 @@
 @import url(../fonts/symbolset/ss-steedicons.css);
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(../fonts/complete-in-him/stylesheet.css);
+@import url(http://fast.fonts.net/cssapi/06f4a4d7-246a-43f6-ad74-a4d2f82c588d.css);
 /*---------------------------------------------------
     LESS Elements 0.9.1
   ---------------------------------------------------
@@ -119,21 +120,20 @@ body {
 .col-1-8 {
   width: 12.5%;
 }
-* {
-  color: #5b5b5b;
-  line-height: 1.5;
-  font-family: 'Lato', helvetica, arial, sans-serif;
-}
 body {
   font-size: 100%;
+  font-family: 'FrutigerLTW01-45Light', helvetica, sans-serif;
+  color: #5b5b5b;
+  line-height: 1.5;
 }
 h1,
 h2,
 h3,
 h4 {
   color: #5b5b5b;
-  font-weight: bold;
+  font-weight: normal;
   padding: 0 0 20px 0;
+  font-family: 'FrutigerLTW01-55Roman';
 }
 h1 {
   font-size: 3rem;
@@ -152,8 +152,8 @@ h4 {
   line-height: 1.4rem;
 }
 h5 {
-  font-size: 1rem;
-  line-height: 1.4rem;
+  font-size: 0.85rem;
+  line-height: 1.19rem;
 }
 a {
   -webkit-transition: all 0.2s ease-out;
@@ -180,6 +180,10 @@ a *:hover {
 .polaroids {
   background-color: #ececec;
   padding: 80px 0 80px 0;
+  font-family: 'Complete In Him';
+}
+.polaroids * {
+  font-family: 'Complete In Him';
 }
 .polaroids .container:after {
   visibility: hidden;
@@ -191,20 +195,37 @@ a *:hover {
 }
 .polaroids li {
   background-color: #ffffff;
-  padding: 10px;
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   float: left;
-  width: 300px;
+  width: 30%;
+  padding: 10px;
+}
+.polaroids li:nth-of-type(1) {
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  transform: rotate(-1deg);
 }
 .polaroids li:nth-of-type(2) {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
   margin: 0 30px 0 30px;
 }
 .polaroids li:last-of-type {
-  float: right;
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg);
 }
 .polaroids li .polaroid-photo {
   display: block;
-  width: 280px;
-  height: 280px;
   background: url('') #70a127 no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -212,6 +233,15 @@ a *:hover {
   background-size: cover;
   overflow: hidden;
   text-decoration: none;
+  -moz-opacity: 0.85;
+  -khtml-opacity: 0.85;
+  -webkit-opacity: 0.85;
+  opacity: 0.85;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=85);
+  filter: alpha(opacity=85);
+}
+.polaroids li .polaroid-photo img {
+  width: 100%;
 }
 .polaroids li .polaroid-label {
   display: block;
@@ -231,31 +261,80 @@ a *:hover {
   padding: 0;
   float: left;
   width: 50%;
+  font-size: 1.5rem;
 }
 .polaroids li .polaroid-label a {
   display: inline-block;
   width: 50%;
   float: right;
   text-align: right;
+  font-size: 1.25rem;
+}
+.polaroids li:hover {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.polaroids li:hover .polaroid-photo {
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+  filter: alpha(opacity=100);
 }
 .intro {
   padding: 80px 0 80px 0;
   text-align: center;
 }
 .intro h1 {
-  padding: 0;
+  padding: 0 0 20px 0;
   margin: 0;
+  color: #242424;
+}
+.intro p {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.5rem;
 }
 header {
+  position: relative;
   height: 620px;
   overflow: hidden;
+  background-color: #f6f6f6;
+}
+header .container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  width: 960px;
+  left: 50%;
+  margin-left: -480px;
+  background-color: transparent;
 }
 header.short {
   height: 280px;
 }
+.menu-icon {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-decoration: none;
+  font-size: 2rem;
+  text-shadow: 1px 1px 0px #ffffff;
+}
+.menu-icon * {
+  color: #015291;
+}
+.menu-icon *:hover {
+  color: #70a127;
+}
 .logo {
   display: block;
-  position: absolute !important;
+  position: absolute;
   top: -5px;
   left: 0;
   width: 229px;
@@ -269,13 +348,13 @@ header.short {
 }
 .panorama {
   display: block;
-  background: url(../images/panorama.jpg) repeat-x 2509px 0;
-  width: 2509px;
+  background: url(../images/panorama.jpg) no-repeat 2223px 0;
+  width: 2223px;
   height: 100%;
-  -webkit-animation: scroll 200s infinite linear;
-  -moz-animation: scroll 200s infinite linear;
-  -o-animation: scroll 200s infinite linear;
-  animation: scroll 200s infinite linear;
+  -webkit-animation: scroll 70s infinite linear;
+  -moz-animation: scroll 70s infinite linear;
+  -o-animation: scroll 70s infinite linear;
+  animation: scroll 70s infinite linear;
 }
 nav {
   position: absolute;
@@ -291,6 +370,7 @@ nav li {
 nav li a {
   color: #015291;
   display: block;
+  font-family: 'FrutigerLTW01-67BoldCn';
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -308,6 +388,7 @@ nav li a .label {
   text-align: center;
   display: block;
   font-weight: bold;
+  font-size: 0.85rem;
 }
 nav li a:hover {
   color: #70a127;
@@ -315,41 +396,154 @@ nav li a:hover {
 nav li a:hover * {
   color: #70a127;
 }
+nav.mobile {
+  display: none;
+  position: relative;
+  width: 100%;
+  background-color: #015291;
+  padding-right: 20px;
+  text-align: center;
+}
+nav.mobile li {
+  text-align: center;
+}
+nav.mobile li a {
+  color: #ffffff;
+  text-shadow: 1px 1px 0px rgba(1, 1, 1, 0.5);
+}
+nav.mobile li a * {
+  color: #ffffff;
+}
+nav.mobile li a:hover {
+  color: #70a127;
+}
+nav.mobile li a:hover * {
+  color: #70a127;
+}
+.callouts {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 0.2s linear ease-in-out;
+  -moz-transition: all 0.2s linear ease-in-out;
+  -o-transition: all 0.2s linear ease-in-out;
+  transition: all 0.2s linear ease-in-out;
+}
+.callouts:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.callouts .left,
+.callouts .right {
+  position: relative;
+  text-decoration: none;
+  padding: 20px 0 0 20px;
+  display: block;
+  height: 95px;
+  overflow: hidden;
+  color: #ffffff;
+  bottom: -5px;
+}
+.callouts .left *,
+.callouts .right * {
+  color: #ffffff;
+}
+.callouts .left p,
+.callouts .right p {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  padding: 0;
+  margin: 0;
+  font-family: 'Complete In Him';
+}
+.callouts .left p span,
+.callouts .right p span {
+  font-family: 'FrutigerLTW01-55Roman';
+  display: block;
+  font-size: 0.85rem;
+}
+.callouts .left .ss-icon,
+.callouts .right .ss-icon {
+  display: block;
+  float: left;
+  font-size: 2.5rem;
+  padding-right: 20px;
+  position: relative;
+}
+.callouts .left:hover,
+.callouts .right:hover {
+  bottom: 0px;
+}
+.callouts .left {
+  width: 300px;
+  background-color: rgba(112, 161, 39, 0.7);
+}
+.callouts .right {
+  width: 200px;
+  background-color: rgba(1, 58, 101, 0.6);
+}
+.callouts .right .ss-icon {
+  padding-top: 7px;
+  font-size: 3rem;
+  line-height: 3rem;
+  padding-right: 10px;
+}
+.callouts .right p {
+  padding-top: 17px;
+}
 @-webkit-keyframes scroll {
-  from {
-    background-position: 2509px 0;
+  0% {
+    background-position: 0 0;
   }
-  to {
-    background-position: -548px 0;
+  50% {
+    background-position: -555.75px 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
 @-moz-keyframes scroll {
-  from {
-    background-position: 2509px 0;
+  0% {
+    background-position: 0 0;
   }
-  to {
-    background-position: -548px 0;
+  50% {
+    background-position: -555.75px 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
 @-o-keyframes scroll {
-  from {
-    background-position: 2509px 0;
+  0% {
+    background-position: 0 0;
   }
-  to {
-    background-position: -548px 0;
+  50% {
+    background-position: -555.75px 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
 @keyframes scroll {
-  from {
-    background-position: 2509px 0;
+  0% {
+    background-position: 0 0;
   }
-  to {
-    background-position: -548px 0;
+  50% {
+    background-position: -555.75px 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
 footer {
-  background-color: #253a75;
-  padding: 40px 0 40px 0;
+  background-color: #015291;
+  padding: 0;
 }
 footer p,
 footer h5,
@@ -358,7 +552,9 @@ footer span {
   color: #dfdede;
 }
 footer h5 {
+  font-family: 'FrutigerLTW01-67BoldCn';
   text-transform: uppercase;
+  font-size: 0.75rem;
 }
 footer a {
   color: #dfdede;
@@ -373,7 +569,7 @@ footer a * {
 footer a *:hover {
   color: #70a127;
 }
-footer:after {
+footer .container:after {
   visibility: hidden;
   display: block;
   font-size: 0;
@@ -386,8 +582,107 @@ footer:after {
 .column-social {
   float: left;
   width: 33%;
+  padding: 20px 0 40px 0;
+}
+.column-about {
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #0c5996;
+}
+.column-about h5 {
+  position: relative;
+  display: block;
+  background-color: #015291;
+  padding: 7px 0 4px 7px;
+}
+.column-about h5:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #0c5996;
+}
+.column-contact {
+  font-size: 0.85rem;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.column-contact .ss-icon {
+  padding-right: 5px;
+}
+.column-contact .label:first-of-type {
+  text-decoration: underline;
 }
 .column-social li {
   display: inline-block;
   margin-right: 10px;
+  font-size: 1.5rem;
+}
+.column-social .copyright {
+  position: anbsolute;
+  bottom: -25px;
+  font-size: 0.75rem;
+}
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+  .container {
+    width: 100%;
+  }
+  header .container {
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+  }
+  header nav {
+    display: none;
+  }
+  header .menu-icon {
+    display: block;
+  }
+  .logo {
+    left: 20px;
+  }
+  .callouts {
+    padding: 0 20px 0 20px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .callouts .left,
+  .callouts .right {
+    width: 100%;
+    clear: both;
+    float: none;
+    bottom: 0;
+  }
+  .callouts .left:hover,
+  .callouts .right:hover {
+    bottom: 0;
+  }
+  .polaroids li {
+    width: 70%;
+    margin: 0 auto;
+    clear: both;
+    float: none;
+  }
+  .column-about,
+  .column-contact,
+  .column-social {
+    width: 100%;
+    clear: both;
+    float: none;
+    padding: 20px;
+  }
+  .column-about p.copyright,
+  .column-contact p.copyright,
+  .column-social p.copyright {
+    position: relative;
+    clear: both;
+    top: 0;
+    left: 0;
+  }
 }

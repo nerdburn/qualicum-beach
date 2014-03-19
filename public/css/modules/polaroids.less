@@ -1,29 +1,39 @@
 .polaroids {
     background-color: #ececec;
     padding: @gutter*2 0 @gutter*2 0;
+    font-family: 'Complete In Him';
+    * {
+        font-family: 'Complete In Him';
+    }
     .container {
         .clearfix();
     }
     li {
         background-color: @white;
-        padding: @gutter/4;
-        @size: 300px;
+        .drop-shadow(1px, 1px, 5px, 0.1);
         float: left;
+        width: 30%;
+        padding: @gutter/4;
+        &:nth-of-type(1) {
+            .rotation(-1deg);
+        }
         &:nth-of-type(2) {
+            .rotation(2deg);
             margin: 0 30px 0 30px;
         }
         &:last-of-type {
-            float: right;
+            .rotation(1deg);      
         }
-        width: @size;
         .polaroid-photo {
             display: block;
-            width: @size - (@gutter/2);
-            height: @size - (@gutter/2);
             background: url('') @green no-repeat center center;
             .background-size(cover);
             overflow: hidden;
             text-decoration: none;
+            .opacity(0.85);
+            img {
+                width: 100%;
+            }
         }
         .polaroid-label {
             display: block;
@@ -35,13 +45,21 @@
                 padding: 0;
                 float: left;
                 width: 50%;
+                font-size: 1.5rem;
             }
             a {
                 display: inline-block;
                 width: 50%;
                 float: right;
                 text-align: right;
+                font-size: 1.25rem;
             }
         }
+        &:hover {
+            .rotation(0deg);
+            .polaroid-photo {
+                .opacity(1);
+            }
+        }        
     }
 }

@@ -155,6 +155,12 @@ h5 {
   font-size: 0.85rem;
   line-height: 1.19rem;
 }
+.section-title {
+  display: block;
+  font-size: 2rem;
+  color: black;
+  padding-bottom: 40px;
+}
 a {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -299,6 +305,319 @@ a *:hover {
   margin: 0 auto;
   font-size: 1.5rem;
 }
+.text-and-video .container {
+  padding: 80px 0 80px 0;
+}
+.text-and-video .container:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.text-and-video .section-title {
+  padding-bottom: 20px;
+}
+.text-and-video p {
+  font-size: 1.1rem;
+}
+.text-and-video .left {
+  width: 70%;
+  padding-right: 40px;
+}
+.text-and-video .right {
+  width: 30%;
+}
+.text-and-video .video {
+  width: 100%;
+}
+.gallery {
+  background-color: #f6f6f6;
+}
+.gallery ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+.gallery ul:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.gallery li {
+  display: block;
+  float: left;
+  padding: 0 2px 0 2px;
+}
+.gallery li img {
+  height: 180px;
+  display: block;
+}
+.links .container {
+  padding: 80px 0 80px 0;
+}
+.links .container:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.links li {
+  display: block;
+  float: left;
+  width: 50%;
+  padding-bottom: 40px;
+}
+.links a {
+  text-decoration: none;
+  display: block;
+  padding-right: 20px;
+}
+.links a:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.links a img {
+  float: left;
+  width: 23%;
+}
+.links a .link-details {
+  width: 77%;
+  float: left;
+  padding-left: 40px;
+}
+.links a h3 {
+  color: #242424;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.links a p {
+  color: #5b5b5b;
+  padding-top: 10px;
+}
+.links a p.link-link {
+  color: #70a127;
+  text-decoration: underline;
+  font-size: 0.85rem;
+  font-family: 'FrutigerLTW01-55Roman';
+}
+.links a p.link-link:hover {
+  color: #015291;
+}
+.testimonials {
+  background-color: #f6f6f6;
+}
+.testimonials .container {
+  padding: 80px 0 80px 0;
+}
+.testimonials blockquote {
+  text-align: center;
+}
+.testimonials blockquote p {
+  font-size: 1.8rem;
+}
+.testimonials blockquote span {
+  display: block;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  font-family: 'FrutigerLTW01-67BoldCn';
+  text-transform: uppercase;
+  color: #242424;
+}
+.faq .container {
+  padding: 80px 0 80px 0;
+}
+.faq ul:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.faq li {
+  width: 50%;
+  float: left;
+  padding: 0 40px 40px 0;
+}
+.faq p:first-of-type {
+  padding-bottom: 20px;
+}
+.faq .q,
+.faq .a {
+  font-size: 1.5rem;
+  font-family: 'FrutigerLTW01-67BoldCn';
+  text-transform: uppercase;
+  line-height: 1;
+}
+.faq .a {
+  display: inline-block;
+  background-color: #d0d0d0;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding-top: 5px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  left: -15px;
+  z-index: 3;
+}
+.faq .answer {
+  position: relative;
+  display: block;
+  padding: 40px;
+  background-color: #ececec;
+}
+.news .container {
+  padding: 80px 0 80px 0;
+}
+.news .container:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.news li {
+  display: block;
+  float: left;
+  width: 50%;
+  padding-bottom: 40px;
+}
+.news a {
+  text-decoration: none;
+  display: block;
+  padding-right: 20px;
+}
+.news a:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.news a img {
+  float: left;
+  width: 23%;
+}
+.news a .news-details {
+  width: 77%;
+  float: left;
+  padding-left: 40px;
+}
+.news a p {
+  padding-top: 10px;
+}
+.news a p:first-of-type {
+  padding: 0;
+}
+.news a .news-date {
+  color: #5b5b5b;
+  font-size: 0.85rem;
+}
+.news a .news-title {
+  color: #242424;
+  font-size: 1.25rem;
+}
+.news a .news-link {
+  color: #70a127;
+  text-decoration: underline;
+  font-size: 0.85rem;
+  font-family: 'FrutigerLTW01-55Roman';
+}
+.news a .news-link:hover {
+  color: #015291;
+}
+.map {
+  background-color: #f6f6f6;
+}
+.map .container {
+  padding: 0;
+}
+.map .container:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.map .section-title {
+  padding-bottom: 20px;
+}
+.map .left {
+  width: 65%;
+  padding: 40px 40px 40px 0;
+}
+.map .right {
+  width: 35%
+        padding: 0;
+}
+.map iframe {
+  display: block;
+  width: 100%;
+  height: 350px;
+}
+.events .container {
+  padding: 80px 0 80px 0;
+}
+.events ul:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.events li {
+  width: 25%;
+  display: block;
+  float: left;
+  padding: 40px;
+  background-color: #f6f6f6;
+  border-right: 4px solid #ffffff;
+  height: 100%;
+}
+.events li:last-of-type {
+  border-right: 4px solid #f6f6f6;
+}
+.events .event-title {
+  color: #242424;
+  font-size: 1.25rem;
+  padding-bottom: 20px;
+}
+.events .event-date {
+  border-top: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+  padding: 10px 0 10px 0;
+}
+.events .event-date .ss-icon {
+  padding-right: 10px;
+  font-size: 1.25rem;
+}
+.events .event-link {
+  display: block;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  font-family: 'FrutigerLTW01-55Roman';
+}
 header {
   position: relative;
   height: 620px;
@@ -316,6 +635,7 @@ header .container {
 }
 header.short {
   height: 280px;
+  background-image: url() repeat-x center center;
 }
 .menu-icon {
   display: none;
@@ -649,6 +969,48 @@ footer .container:after {
   }
   .callouts {
     padding: 0 20px 0 20px;
+  }
+  .text-and-video .container,
+  .faq .container,
+  .testimonials .container,
+  .links .container,
+  .events .container,
+  .news .container {
+    padding: 80px 20px 80px 20px;
+  }
+  .map .left {
+    padding-left: 40px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .faq li,
+  .links li,
+  .news li,
+  .events li {
+    display: block;
+    clear: both;
+    float: none;
+    width: 100%;
+  }
+  .events li {
+    margin-bottom: 20px;
+  }
+  .map .left,
+  .map .right {
+    width: 100%;
+    display: block;
+    clear: both;
+    float: none;
+  }
+  .text-and-video .video {
+    padding-top: 40px;
+  }
+  .text-and-video .left,
+  .text-and-video .right {
+    display: block;
+    float: none;
+    clear: both;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 540px) {

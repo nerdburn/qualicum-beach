@@ -1,0 +1,44 @@
+.faq {
+    .container {
+        padding: @gutter*2 0 @gutter*2 0;
+    }
+    ul {
+        .clearfix();
+    }
+    li {
+        width: 50%;
+        float: left;
+        padding: 0 @gutter @gutter 0;
+    }
+    p {
+        &:first-of-type {
+            padding-bottom: @gutter/2;
+        }
+    }
+    .q,
+    .a {
+        font-size: 1.5rem;
+        font-family: 'FrutigerLTW01-67BoldCn';
+        text-transform: uppercase;    
+        line-height: 1;    
+    }
+    .a {
+        display: inline-block;
+        background-color: #d0d0d0;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        padding-top: 5px;
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        left: -15px;
+        z-index: 3;
+    }
+    .answer {
+        position: relative;
+        display: block;
+        padding: @gutter;
+        background-color: #ececec;
+    }
+}

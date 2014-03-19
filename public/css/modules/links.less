@@ -1,0 +1,47 @@
+.links {
+    .container {
+        padding: @gutter*2 0 @gutter*2 0;
+        .clearfix();
+    }
+    li {
+        display: block;
+        float: left;
+        width: 50%;
+        padding-bottom: @gutter;
+    }
+    a {
+        text-decoration: none;
+        display: block;
+        padding-right: @gutter/2;
+        .clearfix();
+        img {
+            float: left;
+            width: 23%;
+        }
+        .link-details {
+            width: 77%;
+            float: left;
+            padding-left: @gutter;
+        }
+        h3 {
+            color: @black;
+            padding: 0;
+            margin: 0;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        p {
+            color: @text;
+            padding-top: 10px;
+            &.link-link {
+                color: @green;
+                text-decoration: underline;
+                font-size: 0.85rem;
+                font-family: 'FrutigerLTW01-55Roman';
+                &:hover {
+                    color: @blue;
+                }
+            }
+        }
+    }    
+}

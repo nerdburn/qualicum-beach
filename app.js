@@ -24,8 +24,12 @@ swig.setDefaults({ cache: false });
 
 // serve index.html
 app.get('/', function(req, res){
-    console.log('index url');
     res.render(__dirname + '/public/layout.html');
+});
+
+// serve learning page
+app.get('/learning', function(req, res){
+    res.render(__dirname + '/public/learning.html');
 });
 
 // run it

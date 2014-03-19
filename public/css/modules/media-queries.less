@@ -23,6 +23,61 @@
     .callouts {
         padding: 0 @gutter/2 0 @gutter/2;
     }
+    .text-and-video,
+    .faq,
+    .testimonials,
+    .links,
+    .events,
+    .news {
+        .container {
+            padding: @gutter*2 @gutter/2 @gutter*2 @gutter/2;
+        }
+    }
+    .map {
+        .left {
+            padding-left: @gutter;
+        }
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .faq,
+    .links,
+    .news,
+    .events {
+        li {
+            display: block;
+            clear: both;
+            float: none;
+            width: 100%;
+        }
+    }
+    .events {
+        li {
+            margin-bottom: @gutter/2;
+        }
+    }
+    .map {
+        .left,
+        .right {
+            width: 100%;
+            display: block;
+            clear: both;
+            float: none;
+        }
+    }
+    .text-and-video {
+        .video {
+            padding-top: @gutter;
+        }
+        .left,
+        .right {
+            display: block;
+            float: none;
+            clear: both;
+            width: 100%;
+        }
+    }
 }
 
 @media only screen and (max-width: 540px) {

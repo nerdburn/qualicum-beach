@@ -1,0 +1,40 @@
+.events {
+    .container {
+        padding: @gutter*2 0 @gutter*2 0;
+    }
+    ul {
+        .clearfix();
+    }
+    li {
+        width: 25%;
+        display: block;
+        float: left;
+        padding: @gutter;
+        background-color: @hr;
+        border-right: 4px solid @white;
+        height: 100%;
+        &:last-of-type {
+            border-right: 4px solid @hr;
+        }
+    }
+    .event-title {
+        color: @black;
+        font-size: 1.25rem;
+        padding-bottom: @gutter/2;
+    }
+    .event-date {
+        border-top: 2px solid #d9d9d9;
+        border-bottom: 2px solid #d9d9d9;
+        padding: @gutter/4 0 @gutter/4 0;
+        .ss-icon {
+            padding-right: 10px;
+            font-size: 1.25rem;
+        }
+    }
+    .event-link {
+        display: block;
+        padding-top: @gutter/2;
+        font-size: 0.85rem;
+        font-family: 'FrutigerLTW01-55Roman';
+    }
+}
